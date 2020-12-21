@@ -1,0 +1,34 @@
+    double fib1=1;
+    double fib2=1;
+    double fib3;
+    int count = 0;
+    for(int i = 3; i < 1500 ; i++)
+    {
+        stringstream ss;
+        ss.precision(1040);
+        int temp = fib3;
+        fib3 = fib1 + fib2;
+        cout << fib3 << "\n";
+        ss << fib3;
+        int divide = pow(10,(ss.str().size()-1));
+        fib3 = fib3/divide;
+        cout << divide;
+        fib2 = fib2/divide;
+        fib1 = fib1/divide;
+        count += ss.str().size()-1;
+        if(count >= 2)
+        {
+            //cout << fib3;
+            break;
+        }
+        //ss << fib3;
+        //cout << ss.str() << "\n";
+        //if((ss.str()).size()>1000)
+        {
+         //   cout << i;
+        //    break;
+        }
+        fib1=fib2;
+        fib2=fib3;
+
+    }

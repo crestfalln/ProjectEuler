@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+#include <array>
+#include <fstream>
+using namespace std;
+const int input = 200;
+ofstream file("permutations.txt");
+int coins[] = {200, 100, 50, 10, 5, 2, 1};
+void output(int arr[])
+{
+    
+    for(int i = 0; i < 7; i++)
+    {
+        file << arr[i] << " ";
+    }
+    file << "\n";
+    
+}
+void permutations(int k)
+{
+    if(k==1)
+    {
+        output(coins);
+    }
+    else
+    {
+        permutations(k-1);
+        for(int i = 0; i < k-1; i++)
+        {
+            if(k%2 == 0)
+            {
+                swap(coins[i],coins[k-1]);
+            }
+            else
+            {
+                swap(coins[0],coins[k-1]);
+            }
+            permutations(k-1);
+        }
+    }
+    
+}
+int main()
+{
+    permutations(7);
+}

@@ -1,0 +1,38 @@
+    int count = 0, index = 0;
+    for (int a = 0; a <= input / coins[index]; a++)
+    {
+        for (int b = 0; b <= input / coins[index + 1]; b++)
+        {
+
+            for (int c = 0; c <= input / coins[index + 2]; c++)
+            { ...
+
+                for (int d = 0; d <= input / coins[index + 3]; d++)
+                {
+
+                    for (int e = 0; e <= input / coins[index + 4]; e++)
+                    {
+
+                        for (int f = 0; f <= input / coins[index + 5]; f++)
+                        {
+
+                            for (int g = 0; g <= input / coins[index + 6]; g++)
+                            {
+                                int sum = 0;
+                                sum += (a * coins[index]);
+                                sum += (b * coins[index + 1]);
+                                sum += (c * coins[index + 2]);
+                                sum += (d * coins[index + 3]);
+                                sum += (e * coins[index + 4]);
+                                sum += (f * coins[index + 5]);
+                                sum += (g * coins[index + 6]);
+                                if (sum == 200){
+                                    count++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
