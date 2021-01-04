@@ -58,7 +58,6 @@ void permu(int stage = 0, vector<int> perm = {})
                 {
                     number[*(perm.end() - 1)] = false;
                     perm.pop_back();
-                    tmp = 0;
                 }
                 number[i] = true;
                 perm.push_back(i);
