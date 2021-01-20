@@ -1,6 +1,0 @@
-#!/bin/bash
-for c in {100000..50000000..100000}
-do
-				echo $c >> file1
-				echo $c | \time -f %e -q ./main 2>> file1
-done
